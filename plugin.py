@@ -39,6 +39,7 @@
 """
 
 import Domoticz
+import DomoticzAPI as dom
 
 class BasePlugin:
     enabled = False
@@ -126,9 +127,8 @@ class BasePlugin:
         Domoticz.Log("onDisconnect called")
 
     def onHeartbeat(self):
-        Domoticz.Log("onHeartbeat called " + str(self.featureActive) + " ==> " + str(self.heartBeatsSeen) + " > "  + str(self.heartBeatsRequired))
-        #self.controller.process()
         if (self.featureActive):
+            Domoticz.Log("onHeartbeat Feature Active" + str(self.featureActive) + " ==> " + str(self.heartBeatsSeen) + " > "  + str(self.heartBeatsRequired))
             self.heartBeatsSeen = int(self.heartBeatsSeen) + 1
             if(int(self.heartBeatsSeen) >= int(self.heartBeatsRequired)):
                 Domoticz.Log("Timeout, we should disable the device!")
