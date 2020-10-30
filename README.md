@@ -18,3 +18,6 @@ When toggling the switch from OFF to ON, the following things happen:
    - better tuning of the current temperature and set-point to determine more efficient Ovverride setpoint
  - Better monitoring on actual temperatures, set-points (and outside themperature)
  - include Outside temperature
+
+# Issues:
+- What if plugin is enabled twice, not restored? investigate!!

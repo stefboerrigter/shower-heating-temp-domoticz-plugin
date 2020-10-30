@@ -134,7 +134,7 @@ class BasePlugin:
         self.timeoverr = TimeOverr
 
         self.heartBeatsLeft = 0
-        self.heartBeatsRequired = (int(self.timeoverr) * 6) #describe minutes
+        self.heartBeatsRequired = (int(self.timeoverr) * int(6)) #describe minutes
 
         self.stateHandlers = {
             HeatingState.state_init:        self.state_handler_init,
