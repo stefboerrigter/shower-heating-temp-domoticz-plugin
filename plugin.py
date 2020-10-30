@@ -64,7 +64,7 @@ class Thermostats(Enum):
 class BasePlugin:
 
     def __init__(self):
-        #self.var = 123
+        #TODO; cleanup!!
         self.debugging = "Debug"
         self.mainthermSet = 80
         self.mainthermGet = 79
@@ -72,7 +72,7 @@ class BasePlugin:
         self.bathThermGet = 60
         self.mainoverr = 2
         self.bathoverr = 8
-        self.timeoverr = 45
+        self.timeoverr = 30
         self.heartBeatsLeft = 0
         self.heartBeatsRequired = 0
         self.state = HeatingState.state_init
